@@ -11,7 +11,6 @@ import { version } from "@/lib/version"
 import { fontExpo } from "@web/lib/fonts"
 
 export const viewport: Viewport = {
-  // themeColor: 'black',
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },

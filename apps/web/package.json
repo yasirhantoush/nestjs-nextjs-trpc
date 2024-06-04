@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "genversion -e lib/version.ts && next dev",
-    "build": "genversion -e lib/version.ts && next build",
-    "start": "genversion -e lib/version.ts && next start",
-    "lint": "genversion -e lib/version.ts && next lint"
+    "dev": "genversion -e src/lib/version.ts && next dev",
+    "build": "genversion -e src/lib/version.ts && next build",
+    "start": "genversion -e src/lib/version.ts && next start",
+    "lint": "genversion -e src/lib/version.ts && next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
@@ -48,6 +48,7 @@
     "@trpc/server": "^10.45.2",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "genversion": "^3.2.0",
     "jwt-decode": "^4.0.0",
