@@ -36,7 +36,7 @@ export function SiteHeader() {
           {/* start menu */}
           <ul className="flex gap-4">
             {(siteConfig.mainNav || []).map((item: NavItem, index) =>
-              <ShouldCheckAuth value={item.auth}>
+              <ShouldCheckAuth value={item.auth} key={index}>
                 <li><Link key={index} href={item.href || ''}>{item.title}</Link></li>
               </ShouldCheckAuth>
             )}
@@ -46,7 +46,7 @@ export function SiteHeader() {
         {/* end menu */}
         <ul className="flex items-center gap-4">
           {(siteConfig.secondaryNav || []).map((item: NavItem, index) =>
-            <ShouldCheckAuth value={item.auth}>
+            <ShouldCheckAuth value={item.auth} key={index}>
               <li><Link key={index} href={item.href || ''}>{item.title}</Link></li>
             </ShouldCheckAuth>
           )}
@@ -74,20 +74,23 @@ export function SiteHeader() {
             <SheetHeader>
               <SheetTitle>Main Menu</SheetTitle>
               <hr />
-              {/* start menu */}
               <ul className="flex flex-col gap-4">
+                {/* main menu */}
                 {(siteConfig.mainNav || []).map((item: NavItem, index) =>
-                  <ShouldCheckAuth value={item.auth}>
+                  <ShouldCheckAuth value={item.auth} key={index}>
                     <li><Link key={index} href={item.href || ''}>{item.title}</Link></li>
                   </ShouldCheckAuth>
                 )}
                 <hr />
+                
+                {/* secondary menu */}
                 {(siteConfig.secondaryNav || []).map((item: NavItem, index) =>
-                  <ShouldCheckAuth value={item.auth}>
+                  <ShouldCheckAuth value={item.auth} key={index}>
                     <li><Link key={index} href={item.href || ''}>{item.title}</Link></li>
                   </ShouldCheckAuth>
                 )}
                 <hr />
+
                 <li><ThemeToggle /></li>
                 <hr />
               </ul>

@@ -4,17 +4,17 @@ import { UserProfile } from './userProfile.entity';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   @OneToOne(() => UserProfile, (entity) => entity.user)
-  profile: UserProfile;
+  profile?: UserProfile;
 
   @Column()
-  firstName: string;
+  firstName?: string;
 
   @Column()
-  lastName: string;
+  lastName?: string;
   
   @Column()
-  lastLogin: Date;
+  lastLogin?: Date;
 }

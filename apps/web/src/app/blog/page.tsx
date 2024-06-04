@@ -6,7 +6,7 @@ import { publicQuery } from '@web/lib/services/cq.service';
 import React from 'react'
 import PostCard from '../(landing)/components/PostCard';
 
-function page() {
+function BlogPage() {
   const postsQuery = useQuery({
     queryKey: ['posts'],
     enabled: true,
@@ -21,11 +21,11 @@ function page() {
       {/* blog cards */}
       <main className="container mx-auto grid grid-cols-4 gap-4 p-4">
         {(postsQuery.data || []).map(post =>
-          <PostCard post={post} />
+          <PostCard post={post} key={post.id} />
         )}
       </main>
     </div>
   )
 }
 
-export default page
+export default BlogPage

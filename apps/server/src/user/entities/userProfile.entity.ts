@@ -4,45 +4,45 @@ import { User } from './user.entity';
 @Entity()
 export class UserProfile {
     @PrimaryColumn('uuid')
-    id: string;
+    id?: string;
 
     @OneToOne(() => User)
     @JoinColumn({ referencedColumnName: 'id' })
-    user: User;
+    user?: User;
 
     @Column({ default: true })
-    isActive: boolean;
+    isActive?: boolean;
 
     @Column({ default: false })
-    isAdmin: boolean;
+    isAdmin?: boolean;
 
     @Column({ default: false })
-    canAddFamily: boolean;
+    canAddFamily?: boolean;
 
     @Column({ default: false })
-    canTransfer: true;
+    canTransfer?: true;
 
     @Column('json', {})
-    roles: string[];
+    roles?: string[];
 
     @Column({ unique: true })
-    email: string;
+    email?: string;
 
     @Column('text', { select: false })
-    password: string;
+    password?: string;
 
     @Column({ nullable: true })
-    country: string;
+    country?: string;
 
     @Column({ nullable: true })
-    city: string;
+    city?: string;
 
     @Column({ default: 'ar' })
-    language: string;
+    language?: string;
 
     @Column({ nullable: true })
-    birthYear: number;
+    birthYear?: number;
 
     @Column({ nullable: true })
-    gender: string;
+    gender?: string;
 }

@@ -1,7 +1,7 @@
 "use client"
 import React, { useContext } from 'react'
 import { AuthContext } from '../auth-provider';
-import { UnAuthenticatedPage } from './UnAuthenticatedPAge';
+import { UnAuthenticatedPage } from './UnAuthenticatedPage';
 import { UnAuthorizedPage } from './UnAuthorizedPage';
 
 export const EnsureAuthorized = ({ roles, children }: { roles?: string[], children: any }) => {

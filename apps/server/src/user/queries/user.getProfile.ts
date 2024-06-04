@@ -29,8 +29,8 @@ export class UserGetProfileQuery {
         await doValidate(UserGetProfileQueryDTO, dto)
         const profile = await this.manager.findOne(UserProfile, { relations: { user: true }, where: { id: dto.userId } })
         return doSuccesss({ 
-            firstName: profile?.user.firstName,
-            lastName: profile?.user.lastName,
+            firstName: profile?.user?.firstName,
+            lastName: profile?.user?.lastName,
             isAdmin: profile?.isAdmin,
             canAddFamily: profile?.canAddFamily,
             canTransfer: profile?.canTransfer,

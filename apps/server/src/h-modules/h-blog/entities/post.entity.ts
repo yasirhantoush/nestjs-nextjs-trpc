@@ -4,7 +4,7 @@ import { User } from "@server/user/entities/user.entity";
 @Entity('h_post')
 export class HPost {
     @PrimaryGeneratedColumn('uuid')
-    id: string;
+    id?: string;
 
     @Column()
     title: string;
@@ -22,16 +22,17 @@ export class HPost {
     tags: string[];
 
     @ManyToOne(() => User)
-    createdBy: User;
+    createdBy?: User;
 
     @CreateDateColumn()
-    createdAt: Date;
+    createdAt?: Date;
 
     @UpdateDateColumn()
-    updatedAt: Date;
+    updatedAt?: Date;
 
     constructor() {
         this.tags = [];
+        this.title = '';
         this.edited = false;
         this.summary = '';
         this.body = '';

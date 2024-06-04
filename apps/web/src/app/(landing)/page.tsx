@@ -309,7 +309,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold">Recent Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {(postsQuery.data || []).map(post =>
-            <PostCard post={post} />
+            <PostCard post={post} key={post.id}/>
           )}
         </div>
       </main>
@@ -320,7 +320,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
             <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
               <h2 className="text-3xl font-bold tracking-tight text-opacity-80 sm:text-4xl">
-                Don't just take our word for it...
+                Don&apos;t just take our word for it...
               </h2>
 
               <p className="mt-4 text-opacity-10">
@@ -438,7 +438,7 @@ export default function Home() {
                       </div>
 
                       <div className="mt-4">
-                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
+                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin&apos; Alive</p>
 
                         <p className="mt-4 leading-relaxed">
                           No, Rose, they are not breathing. And they have no arms or legs … Where are
@@ -517,7 +517,7 @@ export default function Home() {
                       </div>
 
                       <div className="mt-4">
-                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
+                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin&apos; Alive</p>
 
                         <p className="mt-4 leading-relaxed">
                           No, Rose, they are not breathing. And they have no arms or legs … Where are
@@ -596,7 +596,7 @@ export default function Home() {
                       </div>
 
                       <div className="mt-4">
-                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin' Alive</p>
+                        <p className="text-2xl font-bold text-rose-600 sm:text-3xl">Stayin&apos; Alive</p>
 
                         <p className="mt-4 leading-relaxed">
                           No, Rose, they are not breathing. And they have no arms or legs … Where are
