@@ -1,0 +1,5 @@
+typeorm
+models
+
+shadcn
+tailwind
